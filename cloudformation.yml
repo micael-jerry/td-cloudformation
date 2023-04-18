@@ -1,0 +1,8 @@
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: std21041-s3-bucket
+      AccessControl: Private
+      VersioningConfiguration:
+        Status: Suspended
