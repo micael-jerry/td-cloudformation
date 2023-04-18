@@ -6,3 +6,17 @@ Resources:
       AccessControl: Private
       VersioningConfiguration:
         Status: Suspended
+
+  S3BucketNameParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /mon/bucket/s3/name
+      Type: String
+      Value: !Ref 'S3Bucket'
+
+  S3BucketArnParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /mon/bucket/s3/arn
+      Type: String
+      Value: !GetAtt 'S3Bucket.Arn'
